@@ -7,20 +7,15 @@ static void extcb( EXTDriver *extp, expchannel_t channel)
 {
     extp = extp;
     channel = channel;
-             if (k < 5000 && f == 1)
-            	{
-            		k += 1000;
-            	}
-            else
-            {
-            	f = 0;
-            	k -= 1000;
-            	if (k <= 0)
-            	{
-            		f = 1;
-            	}
-            }
-
+    if (k < 5000 && f == 1) {
+        k += 1000;
+    } else {
+          f = 0;
+          k -= 1000;
+          if (k <= 0) {
+              f = 1;
+          }
+    }
 }
 
 static const EXTConfig extcfg = {
